@@ -1,33 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alat Diagnosa Penyakit</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alat Diagnosa Penyakit</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        <div class="container">
+            <h1>Alat Diagnosa Penyakit</h1>
+            <div class="input-section" id="diagnosisForm">
+                <label for="symptomsInput"
+                    >Masukkan semua gejala yang anda rasakan :</label
+                >
+                <input
+                    type="text"
+                    id="symptomsInput"
+                    placeholder="misal: batuk, demam, sakit tenggorokan"
+                />
+                <button onclick="displayDiagnosis()">Diagnosa</button>
+            </div>
+            <div id="loading" class="spinner"></div>
 
-<body>
-    <div class="container">
-        <h1>Alat Diagnosa Penyakit</h1>
-        <div class="input-section" id="diagnosisForm">
-            <label for="symptomsInput">Masukkan semua gejala yang anda rasakan :</label>
-            <input type="text" id="symptomsInput" placeholder="misal: batuk, demam, sakit tenggorokan">
-            <button onclick="displayDiagnosis()">Diagnosa</button>
+            <div id="result"></div>
         </div>
-        <div id="loading" class="spinner"></div>
-
-
-        <div id="result"></div>
-    </div>
-    <div class="footer">
-        <p>Jumlah Data Penyakit: <span id="diseaseCount"></span></p>
-        <p>Didukung oleh sumber terpercaya: <span id="sources"></span></p>
-        <p>Dibuat oleh <strong>BAGUS APP</strong></p>
-    </div>
-    <script src="data.js"></script>
-    <script src="diagnosis.js"></script>
-</body>
-
+        <div class="footer">
+            <p>Jumlah Data Penyakit: <span id="diseaseCount"></span></p>
+            <p>Didukung oleh sumber terpercaya: <span id="sources"></span></p>
+            <p>Dibuat oleh <strong>B4GUS SOFTWERE</strong></p>
+        </div>
+        <script src="data.js"></script>
+        <script src="diagnosis.js"></script>
+    </body>
 </html>
